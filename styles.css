@@ -1,11 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 :root {
-    /* CSS HEX */
 --yale-blue: #134074ff;
 --berkeley-blue: #13315cff;
 --oxford-blue: #0b2545ff;
 --powder-blue: #8da9c4ff;
---mint-cream: #eef4edff;}
+--mint-cream: #eef4edff;
+}
 
 h1 {
     color: var(--yale-blue);
+}
+
+h1, p {
+    color: var(--yale-blue);
+    margin: 0.5rem 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--mint-cream);
+}
+
+header, footer {
+    background-color: var(--powder-blue);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+header {
+    min-height: 12vh;
+
+}
+header > p {
+    font-weight: bold;
+    font-size: xx-large;
+    color: var(--oxford-blue);
+}
+main {
+    min-height: 83vh;
+    padding: 1rem;
+}
+nav a {
+    color: var(--yale-blue);
+    border: 1px solid var(--oxford-blue);
+    text-decoration: none;
+    font-size: large;
+    color: var(--yale-blue);
+    border-radius: 0.5rem;
+    padding: 0.25rem 0.5rem;
+}
+nav a:hover {
+    background-color: var(--yale-blue);
+    color: var(--powder-blue);
+}
+
+footer {
+    min-height: 5vh;
+}
+/* syntax above select first img tag that is direct first level child of main */
+main > img:nth-of-type(1)   {
+    width: 100%;
+    height: 50vw;
+    max-height: 50vh;
+    object-fit: cover;
+}
+
+p {
+    color: var(--berkeley-blue);
+}
+
+h2 {
+    margin: 1rem 0;
 }
